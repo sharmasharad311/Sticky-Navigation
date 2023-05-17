@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stikcy Nav</title>
+
+    <style>
+        body{
+            padding:10px 15px;
+            margin:10px;
+            background-color: black;
+            color:white;
+            font-size: 25px;
+            border: 1px solid white;
+        }
+        #logo-name{
+            display:flex;
+            justify-content: center;
+        }        
+        #logo{
+            text-align: center;
+            width:200px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 4px 2px 20px gray;
+        }
+        #list li{
+            display:inline;
+            padding:18px;
+            cursor: pointer;
+            color:black;
+            }
+        li:hover{
+            font-size: 30px;
+            text-decoration: underline; 
+            color:white;
+        }
+        #list{
+            height: 30px;
+            background-color: coral;
+            width:100%;
+            text-align: center;
+            margin-top: 2px;
+        }    
+        #para{
+            font-style: italic;
+            text-align: justify;
+        }
+        .sticky{
+            position: sticky;
+            top:0;
+            width:auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="logo-name">
+    <img id="logo" src="C:\Users\ASUS\Desktop\Point Blur_May172023_075545.jpg">
+    </div>
+
+    <nav id="list">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+    </nav>
+
+    <div id="container">
+       
+        <h1>Home</h1>
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, corrupti aperiam assumenda enim, harum quaerat placeat consequatur odio expedita optio omnis fuga hic illum laudantium sed nesciunt ex suscipit pariatur. Necessitatibus accusamus deleniti, aut veritatis quaerat in accusantium aperiam. Nulla distinctio ut velit provident ad tempore facere. Qui rem harum tempora porro eaque tenetur, fugiat aspernatur voluptas, ducimus aperiam numquam consequuntur nulla nisi. Explicabo quaerat iusto praesentium ut consectetur ad pariatur. Ullam neque, atque, velit possimus corporis at ab hic deleniti labore, voluptatum sunt soluta. Doloremque totam doloribus aut mollitia, non hic cumque architecto impedit, ut ratione laudantium quod obcaecati ab inventore in voluptate autem cupiditate earum iste dolore natus dolorem explicabo officia laborum. Commodi id quisquam quasi, exercitationem nisi pariatur cumque? Eum esse aperiam unde excepturi, repellat officia nisi modi explicabo sunt, illum magni molestiae et! Molestiae temporibus veniam officia consectetur a dolore, fugiat aliquam numquam dolores inventore. Blanditiis commodi, quae explicabo et, optio non ipsa sequi exercitationem facere accusantium excepturi fugiat ad dignissimos consectetur soluta. Fugiat officiis, a ipsam laudantium adipisci cum similique. Fuga vero quia consequatur quod nulla, libero provident labore dolore? Non pariatur veritatis molestias! Non voluptatum ipsum quia eius hic officia voluptates delectus voluptatibus saepe dolore numquam beatae laborum ullam, sapiente neque asperiores. Laboriosam in nulla debitis, incidunt voluptatem quis esse odit obcaecati quas aperiam dolorem amet cum, corrupti delectus soluta natus neque, quae dolores cumque pariatur id! Pariatur, quam quas. Corporis doloribus similique tenetur deserunt dolorem quos saepe laudantium blanditiis eligendi neque quidem beatae facilis maiores fuga quo vitae provident quasi ad, repellat, ipsam laboriosam non illo ex? Quae aliquam porro laudantium esse explicabo earum numquam, neque eum? Accusamus, quibusdam quaerat impedit quam necessitatibus earum excepturi tempore cumque aliquid vel. Animi natus commodi reprehenderit repellendus, non atque in distinctio voluptate. Quae, velit! Dolorem, minima?
+        </p>
+    </div>
+
+
+    <script>
+        window.addEventListener('scroll', function(){
+            let nav = document.getElementById("list");
+
+            if(window.pageYOffset >= 185){
+                nav.classList.add('sticky');
+            }else{
+                nav.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>
